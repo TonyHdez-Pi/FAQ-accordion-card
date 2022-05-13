@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    height: 100vh;
+    background: linear-gradient(
+        rgba(173,104,233,255), 
+        rgba(106,99,231,255)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .box is a class for the cube that is on top of the other images */
+.box{
+    display: block;
+    position: absolute;
+    left: 15%;
+    top: 46%;
+}
+.faq{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px  hsl(240, 6%, 50%);
+}
+.faq__svgImages{
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -200px 0;
+    width: 50%;
+}
+.svgImages__woman{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/illustration-woman-online-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -150px 50px;
+}
+.faq__questions{
+    width: 50%;
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.faq__questions h1{
+    margin-left: 1rem;
+    display: block;
+    align-self: flex-start;
+    font-size: 1.5rem;
+}
+.question{
+    width: 90%;
+    border-bottom: 1px solid black;
+    margin: 1rem 0;
+}
+.arrow{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+}
+.answer{
+    width: 100%;
+    display: none
+}
+.answer:active{
+    display: block;
+}
