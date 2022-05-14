@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-size: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 main{
     height: 100vh;
@@ -19,19 +22,21 @@ main{
     left: 15%;
     top: 46%;
 }
+/*white card container */
 .faq{
     width: 60%;
     height: 60%;
     display: flex;
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 10px 10px 5px  hsl(240, 6%, 50%);
+    box-shadow: 5px 5px 10px  hsl(240, 6%, 50%);
 }
+/* added svg images as backgrounds */
 .faq__svgImages{
     background-image: url(images/bg-pattern-desktop.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -200px 0;
+    background-position: -20rem 0;
     width: 50%;
 }
 .svgImages__woman{
@@ -40,39 +45,52 @@ main{
     background-image: url(images/illustration-woman-online-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: -150px 50px;
+    background-position: -15rem 5rem;
 }
+/* End of svgs */
+/* begining of the question/answer section */
 .faq__questions{
+    height: 100%;
     width: 50%;
-    margin: 1rem 1rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .faq__questions h1{
     margin-left: 1rem;
     display: block;
-    align-self: flex-start;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 .question{
-    width: 90%;
-    border-bottom: 1px solid black;
+    color:hsl(240, 6%, 50%);
+    width: 60%;
+    border-bottom: 1px solid hsl(240, 6%, 50%);
     margin: 1rem 0;
+    overflow: hidden;
 }
-.arrow{
+.btn_arrow{
+    color: hsl(237, 12%, 33%);
     background: none;
     border: none;
     cursor: pointer;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;  
 }
+.btn_arrow span{
+    font-size: 1.3rem;
+}
 .answer{
+    font-size: 1.2rem;
+    padding: 1rem 0;
     width: 100%;
-    display: none
 }
-.answer:active{
-    display: block;
+.btn_arrow:focus{
+    padding: 1rem 0;
+    height: unset;
+    transition: all 300ms ease-in;
 }
+/* end of question/answer section */
