@@ -56,41 +56,56 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 .faq__questions h1{
-    margin-left: 1rem;
+    margin-left: 12%;
     display: block;
     font-size: 3rem;
 }
-.question{
-    color:hsl(240, 6%, 50%);
-    width: 60%;
-    border-bottom: 1px solid hsl(240, 6%, 50%);
-    margin: 1rem 0;
-    overflow: hidden;
-}
-.btn_arrow{
-    color: hsl(237, 12%, 33%);
-    background: none;
-    border: none;
-    cursor: pointer;
+.grid-wrapper{
     width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: repeat(5, 1fr);
+    grid-column: 1/-1;
+    padding: 1rem 0;
+}
+.button_container{
     height: 100%;
-    display: flex;
-    justify-content: space-between;  
 }
-.btn_arrow span{
-    font-size: 1.3rem;
+.question p{
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
 }
+.question{
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    text-align: left;
+    padding: 0;
+    background: none;
+    background-image: url(images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    border: none ;
+    display: block;
+    width: 80%;
+    height: 25%;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 30%);
+    overflow: hidden;
+    margin: 0 auto;
+}
+ .question:focus{
+    transition: all 400ms ease-in-out;
+    height: 80%;
+} 
 .answer{
+    color: hsl(237, 12%, 33%);
     font-size: 1.2rem;
-    padding: 1rem 0;
     width: 100%;
-}
-.btn_arrow:focus{
-    padding: 1rem 0;
-    height: unset;
-    transition: all 300ms ease-in;
 }
 /* end of question/answer section */
